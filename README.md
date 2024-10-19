@@ -25,7 +25,7 @@
 ### 1. Clone the Repository
 Download the repository using Git:
 ```
-git clone https://github.com/qqloses/qqloses.git
+git clone https://github.com/qqloses/Discord-VoiceConnected.git
 ```
 
 ### 2. Download Node.js
