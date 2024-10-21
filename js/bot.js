@@ -8,7 +8,7 @@ async function connectBot() {
   const { channelid: channelId, guildid: guildId, selfdeaf: selfDeaf, selfmute: selfMute } = config;
 
   client.on('ready', async () => {
-    console.log(`Bot connected. username: ${client.user.username}`);
+    console.log(`Bot connected. Username: ${client.user.username}`);
 
     const connectToVoiceChannel = () => {
       const connection = getVoiceConnection(guildId);
@@ -23,7 +23,7 @@ async function connectBot() {
 
       const voiceChannel = client.channels.cache.get(channelId);
 
-      if (voiceChannel.members.size >= voiceChannel.userLimit) {
+      if (voiceChannel.members.size >= voiceChannel.userLimit && voiceChannel.userLimit > 0) {
         console.log(`Voice channel '${voiceChannel.name}' is full.`);
         return;
       }
