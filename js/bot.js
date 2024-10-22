@@ -9,6 +9,7 @@ async function connectBot() {
     console.log(`Bot connected. Username: ${client.user.username}`); 
 
     connectToVoiceChannel(client);
+    setInterval(() => connectToVoiceChannel(client), 60000);
   });
 
   await client.login(token);
